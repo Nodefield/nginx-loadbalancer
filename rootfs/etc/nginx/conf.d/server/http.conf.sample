@@ -3,7 +3,7 @@ server {
 
 	server_name domain.tld;
 
-        set $upstream "domain.tld";
+        set $upstream "webcluster";
         include conf.d/inc/proxy.conf;
 
 	include conf.d/inc/gzip.conf;

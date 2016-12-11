@@ -11,7 +11,7 @@ server {
         ssl_certificate_key     "conf.d/ssl/domain.tld.key";
 	include conf.d/inc/ssl.conf;
 
-        set $upstream "domain.tld";
+        set $upstream "webcluster";
         include conf.d/inc/proxy.conf;
 
 	include conf.d/inc/gzip.conf;
