@@ -1,0 +1,10 @@
+server {
+	listen 80;
+
+	server_name domain.tld;
+
+        set $upstream "domain.tld";
+        include conf.d/inc/proxy.conf;
+
+	include conf.d/inc/gzip.conf;
+}

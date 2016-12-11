@@ -1,0 +1,18 @@
+server {
+	listen 80;
+	server_name domain.tld;
+	return 301 https://$host$request_uri;
+}
+
+server {
+	server_name domain.tld;
+
+	ssl_certificate         "conf.d/ssl/domain.tld.pem";
+        ssl_certificate_key     "conf.d/ssl/domain.tld.key";
+	include conf.d/inc/ssl.conf;
+
+        set $upstream "domain.tld";
+        include conf.d/inc/proxy.conf;
+
+	include conf.d/inc/gzip.conf;
+}

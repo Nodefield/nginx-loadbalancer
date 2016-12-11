@@ -1,0 +1,5 @@
+upstream webcluster {
+	zone webcluster 64k;
+	server web1.my.lan;  
+	server web2.my.lan;
+}

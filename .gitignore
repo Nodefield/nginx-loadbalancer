@@ -1,0 +1,6 @@
+.DS_Store
+.Apple*
+
+/rootfs/etc/nginx/conf.d/ssl/*.pem
+/rootfs/etc/nginx/conf.d/ssl/*.key
+
