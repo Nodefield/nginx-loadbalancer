@@ -5,6 +5,7 @@ server {
 }
 
 server {
+	listen 443 ssl;
 	server_name domain.tld;
 
 	ssl_certificate         "conf.d/ssl/domain.tld.pem";
