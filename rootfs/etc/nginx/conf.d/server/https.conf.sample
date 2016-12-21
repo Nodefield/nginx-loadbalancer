@@ -13,7 +13,13 @@ server {
 	include conf.d/inc/ssl.conf;
 
         set $upstream "webcluster";
-        include conf.d/inc/proxy.conf;
+        include conf.d/inc/upstream.conf;
 
 	include conf.d/inc/gzip.conf;
+
+	include conf.d/inc/errorpages.conf;
+
+        location / {
+             try_files $uri @upstream;
+        }
 }
