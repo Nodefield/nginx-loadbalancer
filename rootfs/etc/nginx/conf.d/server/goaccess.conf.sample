@@ -1,0 +1,13 @@
+server {
+	listen 10.0.0.1:80;
+	server_name lb1.local.lan;
+
+	allow  10.0.0.0/8;
+	deny   all;
+
+	include conf.d/inc/gzip.conf;
+
+	include conf.d/inc/errorpages.conf;
+
+	root /var/www/goaccess;
+}
