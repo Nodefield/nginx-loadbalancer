@@ -1,0 +1,3 @@
+#!/bin/bash
+goaccess -f /var/log/nginx/access.log --real-time-html --ignore-crawlers -o /var/www/goaccess/index.html
+
